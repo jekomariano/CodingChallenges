@@ -15,30 +15,34 @@ public class RomanToInt {
         // EXPECTED: 29
         System.out.println(romanToInt("XXIX"));
     }
-
+    
     public static int romanToInt(String convertValue) {
-        String[] romanSymbols = convertValue.split("");
+        String[] romanSymbols = convertValue.split(""); // splits the input
         int size = romanSymbols.length;
+        // initialized the roman map values
         HashMap<String, Integer> romanValuesMap = initializeRomanValues();
 
-        // start of evaluation
-        int result = 0;
+        int result = 0; // starts the result as 0
         for (int i = 0; i < size; i++) {
+            // gets the roman numral by index
             String currRoman = romanSymbols[i];
-            int value = 0;
+            int value = 0; // starts the value as 0
 
+            // if the current roman numerals is not the last
             if ((i + 1) < size) {
+                // gets the next roman numeral to be evaluated together
                 String doubleRoman = currRoman + romanSymbols[i + 1];
+                // get the value, if not present it will return as 0
                 value = getValue(romanValuesMap, doubleRoman);
             }
-
+            // Gets the value of the current roman numeral
             if (value == 0) {
                 value = getValue(romanValuesMap, currRoman);
             } else {
-                i++;
+                i++; // adds the index of the next roman numeral
             }
+            // adds the value that has been evaluated to the current result
             result = result + value;
-
         }
         return result;
     }
