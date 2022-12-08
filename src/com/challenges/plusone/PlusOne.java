@@ -1,4 +1,4 @@
-package com.challenges;
+package com.challenges.plusone;
 
 public class PlusOne {
 
@@ -23,7 +23,7 @@ public class PlusOne {
         // splits the numbers into its own on a String array
         String[] inputs = input.split("");
         int length = inputs.length;
-        
+
         String result = "";
         StringBuilder converted = new StringBuilder();
 
