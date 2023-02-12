@@ -1,4 +1,4 @@
-package com.challenges.plusone;
+package challenges.plusone;
 
 public class PlusOne {
 

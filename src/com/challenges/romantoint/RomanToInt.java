@@ -1,4 +1,4 @@
-package com.challenges.romantoint;
+package challenges.romantoint;
 
 import java.util.HashMap;
 
@@ -15,7 +15,7 @@ public class RomanToInt {
         // EXPECTED: 29
         System.out.println(romanToInt("XXIX"));
     }
-    
+
     public static int romanToInt(String convertValue) {
         String[] romanSymbols = convertValue.split(""); // splits the input
         int size = romanSymbols.length;
